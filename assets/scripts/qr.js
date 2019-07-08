@@ -20,8 +20,8 @@ function openQRCamera(node) {
 	  $.ajax({
 		  url: "http://localhost:8080/qr_localhost/welcome/qr_add",
 		  type: "POST",
-		  ContentType: 'application/x-www-form-urlencoded',
-	  	data:data1,
+		  ContentType: 'application/json',
+	  	data:JSON.stringify(data1),
 			// application: "application/json",
 		  processData: false,
 		  success: function(data) {
