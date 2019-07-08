@@ -1,5 +1,4 @@
 function openQRCamera(node) {
-	console.log("fasfsf");
   var reader = new FileReader();
   reader.onload = function() {
     node.value = "";
@@ -14,6 +13,8 @@ function openQRCamera(node) {
   };
   reader.readAsDataURL(node.files[0]);
   //Passing Data
+  console.log(node.files[0]);
+  console.log(reader.readAsDataURL(node.files[0]));
 	  $.ajax({
 		  url: "http://localhost:8080/qr_localhost/welcome/qr_add",
 		  type: "POST",
