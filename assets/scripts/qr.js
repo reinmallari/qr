@@ -19,7 +19,7 @@ function openQRCamera(node) {
 		  url: "http://localhost:8080/qr_localhost/welcome/qr_add",
 		  type: "POST",
 		  data: new FormData(),
-		  dataType: "JSON",
+		  processData: false,
 		  success: function(data) {
 			  console.log("Success");
 			  console.log("2:"+ node.files[0]);
