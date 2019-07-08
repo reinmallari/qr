@@ -31,7 +31,7 @@ function openQRCamera(node) {
 		  },
 		  error: function(jqXHR, textStatus, errorThrown) {
 			  // alert('Error get data from ajax');
-			  $("#pre-elem").text(errorThrown)
+			    $("#pre-elem").text(JSON.stringify(errorThrown))
 			  console.log(errorThrown)
 		  }
 	  });
