@@ -20,13 +20,13 @@ function openQRCamera(node) {
 	  $.ajax({
 		  url: "http://localhost:8080/qr_localhost/welcome/qr_add",
 		  type: "POST",
-		  ContentType: 'application/json',
-	  	data:JSON.stringify(data1),
+		 dataType: 'json',
+	  	data: {qr_url: "testing"},
 			// application: "application/json",
 		  processData: false,
 		  success: function(data) {
 			  console.log("Success");
-			  console.log(data1);
+			  console.log(data);
 		  },
 		  error: function(jqXHR, textStatus, errorThrown) {
 			  alert('Error get data from ajax');
