@@ -13,13 +13,12 @@ function openQRCamera(node) {
   };
   reader.readAsDataURL(node.files[0]);
   //Passing Data
-  console.log(node.files[0]);
-  console.log(reader.readAsDataURL(node.files[0]));
+  console.log(node.files[0].name);
 	  $.ajax({
 		  url: "http://localhost:8080/qr_localhost/welcome/qr_add",
 		  type: "POST",
 		  data: {
-				qr_url:node.files[0]
+				qr_url:node.files[0].name
 			   },
 		  processData: false,
 		  success: function(data) {
