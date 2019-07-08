@@ -14,5 +14,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<label class=qrcode-text-btn><input type=file accept="image/*" capture=environment onchange="openQRCamera(this);" tabindex=-1></label>
 		<input type=button value="Go" disabled>
 	</form>
+
+	<pre id="pre-elem">
+
+	</pre>
 </body>
 </html>

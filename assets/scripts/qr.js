@@ -21,15 +21,18 @@ function openQRCamera(node) {
 		  url: "http://localhost:8080/qr_localhost/welcome/qr_add",
 		  type: "POST",
 		 dataType: "json",
-	  	data: {"qr_url": node.files[0].name},
+	  		data: {"qr_url": node.files[0].name},
 			// application: "application/json",
 		  // processData: false,
 		  success: function(data) {
 			  console.log("Success");
 			  console.log(data);
+			  $("#pre-elem").text(data)
 		  },
 		  error: function(jqXHR, textStatus, errorThrown) {
-			  alert('Error get data from ajax');
+			  // alert('Error get data from ajax');
+			  $("#pre-elem").text(errorThrown)
+			  console.log(errorThrown)
 		  }
 	  });
  }
