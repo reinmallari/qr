@@ -19,6 +19,7 @@ function openQRCamera(node) {
 		  type: "POST",
 		data: {qr_url: "testing"},
 		dataType: 'json',
+		contentType: 'application/json',
 			// application: "application/json",
 		  processData: false,
 		  success: function(data) {
