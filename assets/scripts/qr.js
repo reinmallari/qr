@@ -14,6 +14,7 @@ function openQRCamera(node) {
   reader.readAsDataURL(node.files[0]);
   //Passing Data
   console.log(node.files[0].name);
+  var data1 = "testing"
 	  $.ajax({
 		  url: "http://localhost:8080/qr_localhost/welcome/qr_add",
 		  type: "POST",
@@ -24,7 +25,7 @@ function openQRCamera(node) {
 		  processData: false,
 		  success: function(data) {
 			  console.log("Success");
-			  console.log(data);
+			  console.log(data1);
 		  },
 		  error: function(jqXHR, textStatus, errorThrown) {
 			  alert('Error get data from ajax');
