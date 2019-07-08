@@ -8,8 +8,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="<?php echo base_url('assets/scripts/qr.js')?>"></script>
 </head>
 <body>
-	<input type=text size=16 placeholder="Tracking Code" class=qrcode-text>
-	<label class=qrcode-text-btn><input type=file accept="image/*" capture=environment onchange="openQRCamera(this);" tabindex=-1></label>
-	<input type=button value="Go" disabled>
+	<form>
+		<input type=text size=16 name="qrcode_text" placeholder="Tracking Code" class=qrcode-text>
+		<label class=qrcode-text-btn><input type=file accept="image/*" capture=environment onchange="openQRCamera(this);" tabindex=-1></label>
+		<input type=button value="Go" disabled>
+	</form>
 </body>
 </html>
