@@ -20,6 +20,7 @@ function openQRCamera(node) {
 		  data: {
 				qr_url: "testing"
 			   },
+			application: "application/json",
 		  processData: false,
 		  success: function(data) {
 			  console.log("Success");
