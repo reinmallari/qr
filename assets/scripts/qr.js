@@ -8,13 +8,13 @@ function openQRCamera(node) {
         alert("No QR code found. Please make sure the QR code is within the camera's frame and try again.");
       } else {
         node.parentNode.previousElementSibling.value = res;
-	   console.log("1:"+ res);
       }
     };
     qrcode.decode(reader.result);
   };
   reader.readAsDataURL(node.files[0]);
   //Passing Data
+  console.log("eto value oy:" + $('#qrcode_text').val());
 	  $.ajax({
 		  url: "http://localhost:8080/qr_localhost/welcome/qr_add",
 		  type: "POST",
