@@ -14,18 +14,15 @@ function openQRCamera(node) {
   };
   reader.readAsDataURL(node.files[0]);
   //Passing Data
-  console.log("eto value oy:" + $('#qrcode_text').val());
 	  $.ajax({
 		  url: "http://localhost:8080/qr_localhost/welcome/qr_add",
 		  type: "POST",
 		  data: {
-				qr_url:$('#qrcode_text').val()
+				qr_url:node.files[0]
 			   },
 		  processData: false,
 		  success: function(data) {
 			  console.log("Success");
-			  console.log($('#qrcode_text').value());
-			  console.log("2:"+ node.files[0]);
 		  },
 		  error: function(jqXHR, textStatus, errorThrown) {
 			  alert('Error get data from ajax');
