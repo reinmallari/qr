@@ -7,8 +7,9 @@ $(document).ready(function() {
 	  if (cameras.length > 0) {
 	    scanner.start(cameras[0]);
 	    console.log(cameras[0].name);
+	    document.getElementById("camera_name").innerHTML = cameras[0].name;
 	  } else {
-	    console.error('No cameras found.');
+	    document.getElementById("camera_name").innerHTML = "No cameras found";
 	  }
 	}).catch(function (e) {
 	  console.error(e);
