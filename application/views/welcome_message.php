@@ -1,22 +1,30 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/qr_css.css')?>">
-	<script src="<?php echo base_url('assets/lib/qr_lib.js')?>"></script>
-	<script src="<?php echo base_url('assets/scripts/qr.js')?>"></script>
-	<script src="<?php echo base_url('assets/lib/jquery.min.js')?>"></script>
+	<title>JQuery HTML5 QR Code Scanner using Instascan JS Example - ItSolutionStuff.com</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 </head>
 <body>
-	<form>
-		<input type=text size=16 id="qrcode_text"  name="qrcode_text" placeholder="Tracking Code" class=qrcode-text>
-		<label class=qrcode-text-btn><input type=file accept="image/*" capture=environment onchange="openQRCamera(this);" tabindex=-1></label>
-		<input type=button value="Go" disabled>
-	</form>
 
-	<pre id="pre-elem">
+    <h1>JQuery HTML5 QR Code Scanner using Instascan JS Example - ItSolutionStuff.com</h1>
 
-	</pre>
+    <video id="preview"></video>
+    <script type="text/javascript">
+      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+      scanner.addListener('scan', function (content) {
+        alert(content);
+      });
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+          scanner.start(cameras[0]);
+        } else {
+          console.error('No cameras found.');
+        }
+      }).catch(function (e) {
+        console.error(e);
+      });
+    </script>
+
 </body>
 </html>
