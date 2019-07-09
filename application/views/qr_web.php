@@ -7,7 +7,6 @@
 	<script src="<?php echo base_url('assets/lib/jquery.min.js')?>"></script>
 </head>
 <body>
-    <h1>For web</h1>
     <div id="app">
       <div class="sidebar">
         <section class="cameras">
