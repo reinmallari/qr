@@ -1,3 +1,12 @@
+window.onload = function () {
+	var hasTouchscreen = 'ontouchstart' in window;
+	if(hasTouchscreen){
+		alert("mobile to");
+	}else{
+		alert("sa web e");
+	}
+}
+
 function openQRCamera(node) {
   var reader = new FileReader();
   reader.onload = function() {
