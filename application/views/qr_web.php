@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JQuery HTML5 QR Code Scanner using Instascan JS Example - ItSolutionStuff.com</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+	<title>For Web</title>
+	<script src="<?php echo base_url('assets/lib/qr_lib_web.js')?>"></script>
+	<script src="<?php echo base_url('assets/lib/jquery.min.js')?>"></script>
 </head>
 <body>
-    <h1>JQuery HTML5 QR Code Scanner using Instascan JS Example - ItSolutionStuff.com</h1>
+    <h1>For web</h1>
     <video id="preview"></video>
     <script type="text/javascript">
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
