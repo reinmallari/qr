@@ -5,6 +5,7 @@ $(document).ready(function() {
 	  alert(content);
 	  val = content;
 	});
+	console.log(val);
 	$('ul.qr_content_list').append('<li>' + val + '</li>');
 	Instascan.Camera.getCameras().then(function (cameras) {
 	  if (cameras.length > 0) {
