@@ -2,11 +2,9 @@ $(document).ready(function() {
 	let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
 	var val = '';
 	scanner.addListener('scan', function (content) {
-	  alert(content);
-	  val = content;
+	  console.log(content);
+	  $('ul.qr_content_list').append('<li>' + content + '</li>');
 	});
-	console.log(val);
-	$('ul.qr_content_list').append('<li>' + val + '</li>');
 	Instascan.Camera.getCameras().then(function (cameras) {
 	  if (cameras.length > 0) {
 	    scanner.start(cameras[0]);
