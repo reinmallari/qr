@@ -1,27 +1,3 @@
-window.onload = function () {
-	var hasTouchscreen = 'ontouchstart' in window;
-	if(hasTouchscreen){
-		$.ajax({
-			url: base_url+"welcome/",
-			success: function(data) {
-				alert("mobile to" + base_url);
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
-				alert("error");
-			}
-		});
-	}else{
-		$.ajax({
-			url: base_url+"welcome/indexWeb",
-			success: function(data) {
-				alert("sa web e" + base_url);
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
-				alert("error");
-			}
-		});
-	}
-}
 //Start For mobile
 function openQRCamera(node) {
   var reader = new FileReader();
