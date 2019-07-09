@@ -3,7 +3,6 @@ window.onload = function () {
 	if(hasTouchscreen){
 		$.ajax({
 			url: base_url+"welcome/",
-			type: GET,
 			success: function(data) {
 				alert("mobile to" + base_url);
 			},
@@ -14,7 +13,6 @@ window.onload = function () {
 	}else{
 		$.ajax({
 			url: base_url+"welcome/indexWeb",
-			type: GET,
 			success: function(data) {
 				alert("sa web e" + base_url);
 			},
