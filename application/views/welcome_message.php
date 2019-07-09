@@ -7,6 +7,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="<?php echo base_url('assets/lib/qr_lib.js')?>"></script>
 	<script src="<?php echo base_url('assets/scripts/qr.js')?>"></script>
 	<script src="<?php echo base_url('assets/lib/jquery.min.js')?>"></script>
+	<script type="text/javascript">
+		 var base_url = '<?php echo base_url(); ?>';
+	 </script>
 </head>
 <body>
 	<form>
