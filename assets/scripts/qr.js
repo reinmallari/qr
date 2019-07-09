@@ -3,10 +3,10 @@ window.onload = function () {
 	if(hasTouchscreen){
 		alert("mobile to");
 		$.ajax({
-			url: base_url+"welcome/indexWeb",
+			url: base_url+"welcome/",
 			type: GET,
 			success: function(data) {
-				console.log("Success");
+				window.location.href = base_url +"welcome/";
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 
@@ -15,10 +15,10 @@ window.onload = function () {
 	}else{
 		alert("sa web e");
 		$.ajax({
-			url: base_url+"welcome/",
+			url: base_url+"welcome/indexWeb",
 			type: GET,
 			success: function(data) {
-				console.log("Success");
+				window.location.href = base_url +"welcome/indexWeb";
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 
