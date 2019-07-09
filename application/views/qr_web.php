@@ -3,8 +3,6 @@
 <head>
 	<title>For Web</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/qr_web_css.css')?>">
-	<script src="<?php echo base_url('assets/lib/qr_lib_web.js')?>"></script>
-	<script src="<?php echo base_url('assets/lib/jquery.min.js')?>"></script>
 </head>
 <body>
     <div id="app">
@@ -35,21 +33,9 @@
         <video id="preview"></video>
       </div>
     </div>
-    <script type="text/javascript">
-      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
-      scanner.addListener('scan', function (content) {
-        alert(content);
-      });
-      Instascan.Camera.getCameras().then(function (cameras) {
-        if (cameras.length > 0) {
-          scanner.start(cameras[0]);
-        } else {
-          console.error('No cameras found.');
-        }
-      }).catch(function (e) {
-        console.error(e);
-      });
-    </script>
+    <script src="<?php echo base_url('assets/lib/qr_lib_web.js')?>"></script>
+    <script src="<?php echo base_url('assets/lib/jquery.min.js')?>"></script>
+    <script src="<?php echo base_url('assets/scripts/qr_web.js')?>"></script>
     <script type="text/javascript">
 		var base_url = '<?php echo base_url(); ?>';
 	</script>
