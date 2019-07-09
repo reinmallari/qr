@@ -4,6 +4,7 @@ $(document).ready(function() {
 	scanner.addListener('scan', function (content) {
 	  console.log(content);
 	  $('ul.qr_content_list').append('<li>' + content + '</li>');
+	  document.getElementById("no_scan_qr").innerHTML = "";
 	});
 	Instascan.Camera.getCameras().then(function (cameras) {
 	  if (cameras.length > 0) {
