@@ -2,11 +2,31 @@ window.onload = function () {
 	var hasTouchscreen = 'ontouchstart' in window;
 	if(hasTouchscreen){
 		alert("mobile to");
+		$.ajax({
+			url: base_url+"welcome/indexWeb",
+			type: GET,
+			success: function(data) {
+				console.log("Success");
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+		});
 	}else{
 		alert("sa web e");
+		$.ajax({
+			url: base_url+"welcome/",
+			type: GET,
+			success: function(data) {
+				console.log("Success");
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+
+			}
+		});
 	}
 }
-
+//Start For mobile
 function openQRCamera(node) {
   var reader = new FileReader();
   reader.onload = function() {
@@ -42,3 +62,4 @@ function openQRCamera(node) {
 		  }
 	  });
  }
+ //End For mobile

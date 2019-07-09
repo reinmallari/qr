@@ -12,4 +12,8 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+	public function indexWeb()
+	{
+		$this->load->view('qr_web');
+	}
 }
