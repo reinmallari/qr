@@ -17,13 +17,12 @@
         </section>
         <section class="scans">
           <h2>Scans</h2>
-          <ul v-if="scans.length === 0">
+          <ul>
             <li class="empty">No scans yet</li>
           </ul>
-          <transition-group name="scans" tag="ul">
-            <li v-for="scan in scans" :key="scan.date" :title="scan.content">{{ scan.content }}</li>
-          </transition-group>
-        </section>
+		<ul class="qr_content_list">
+	  	</ul>
+	   </section>
       </div>
       <div class="preview-container">
         <video id="preview"></video>
