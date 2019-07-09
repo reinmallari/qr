@@ -2,9 +2,10 @@ window.onload = function () {
 	var hasTouchscreen = 'ontouchstart' in window;
 	if(hasTouchscreen){
 		$.ajax({
+			url: base_url+"welcome/",
+			type: GET,
 			success: function(data) {
 				alert("mobile to" + base_url);
-				window.location.href = base_url +"welcome/";
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 				alert("error");
@@ -12,9 +13,10 @@ window.onload = function () {
 		});
 	}else{
 		$.ajax({
+			url: base_url+"welcome/indexWeb",
+			type: GET,
 			success: function(data) {
 				alert("sa web e" + base_url);
-				window.location.href = base_url +"welcome/indexWeb";
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
 				alert("error");
