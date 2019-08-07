@@ -1,0 +1,111 @@
+/* Start of Login Mobile */
+@font-face {
+  font-family: 'Circular';
+  src: url('../fonts/CircularStd-Bold.ttf');
+}
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Circular';
+  height: 100%;
+}
+.bg-mobile-img-login {
+	width: 100%;
+     height: 100%;
+     background: url('../images/login_bg.jpg');
+     background-size: cover;
+     background-color: rgba(0, 0, 0, 0.5);
+     background-position: center center;
+}
+.rectangle_mobile {
+	height: 10%;
+	width: 100%;
+	background-color: #D53931;
+	opacity: 0.7;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 85%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #FAFAFA;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #FAFAFA;
+  font-size:50px;
+  margin-top: 100px;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #757575;
+  font-size:50px;
+}
+/* For placeholder */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #FAFAFA;
+    font-size: 50px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color:    #FAFAFA;
+    font-size: 50px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #FAFAFA;
+    font-size: 50px;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #FAFAFA;
+    font-size: 50px;
+}
+/* Set a style for the submit button */
+.btn_web_login_submit {
+	background-color: #D53931;
+     color: white;
+     padding: 16px 20px;
+     border: none;
+     cursor: pointer;
+     width: 40%;
+     font-size: 3em;
+     border-radius: 40px;
+     width: 60%;
+     height: 6%;
+     margin-top: 74px;
+}
+
+.btn_web_login_submit:hover {
+  opacity: 0.9;
+}
+.login_title_size_mobile{
+	width: 85%;
+}
+.logo {
+  	text-align: center;
+}
+.overly_mobile{
+	background-color: rgba(12, 10, 10, 0.4);
+	height: 100vh;
+}
+.container_login_mobile_form{
+	padding-top: 80px;
+}
+.center_mobile_login_form{
+	text-align: center;
+}
+.logged_footer_mobile{
+	text-align: center;
+     position: absolute;
+     bottom: 0px;
+}
+.footer_size_mobile{
+	text-align: center;
+	color: #FAFAFA;
+	font-size: 2.5em;
+}
+.font_color_input{
+	color:#FAFAFA;
+}
+/* End of Login Mobile */
